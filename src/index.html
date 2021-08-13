@@ -6,11 +6,11 @@
 <body>
   <div class="container">
     <h1>Currency Exchanger</h1>
-    <label for="usCurrency">Enter the amount of money in USD $</label>
-    <input id="usCurrency" type="text">
+    <label for="amount">Enter the amount of money in USD $</label>
+    <input id="amount" type="text">
     <div class="form-group">
-      <label for="otherCurrency">What would you like to convert your USD $ to?</label>
-      <select id="otherCurrency">
+      <label for="currency">What would you like to convert your USD $ to?</label>
+      <select id="currency">
         <option selected="selected"></option>
         <option value="BSD">Bahamian Dollar</option>
         <option value="CAD">Canadian Dollars</option>
@@ -19,8 +19,8 @@
         <option value="MXN">Mexican Peso</option>
         <option value="NE">Existential Crisis Dollars</option>
       </select>
+      <button class="btn-success" id="convert">Convert my currency</button>
     </div>
-    <button class="btn-success" id="convert">Convert my currency</button>
     <div class="showErrors"></div>
     <div class="showUnsupportedErrors"></div>
     <div class="showConvertedCurrency"></div>

@@ -1,5 +1,5 @@
-export default class exchangeRate {
-  static getRate (currency){
+export default class ExchangeRate {
+  static getRate (currency, amount){
     return fetch('https://v6.exchangerate-api.com/v6/$process.env.API_KEY}/pair/USD/${currency}/${amount}')
     .then(function(response) {
       if (!response.ok) {
@@ -8,7 +8,7 @@ export default class exchangeRate {
       return response.json();
     })
     .catch(function(error) {
-      return Error(error);
+      return error;
     })
   }
 }
