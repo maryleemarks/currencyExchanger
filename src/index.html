@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>document</title>
-  <!-- When change this title must change title in webpack.config.js plugins section and in package.json -->
+  <title>Currency Exchanger</title>
 </head>
 <body>
-
-  
+  <div class="container">
+    <h1>Currency Exchanger</h1>
+    <label for="usCurrency">Enter the amount of money in USD</label>
+    <input id="usCurrency" type="number">
+    <button class="btn-success" id="convert">Convert my currency</button>
+    <div class="showErrors"></div>
+    <div class="showConvertedCurrency"></div>
+  </div> 
 </body>
 </html>
