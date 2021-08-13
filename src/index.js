@@ -12,7 +12,9 @@ function getElements(response) {
   } else {
     $('.showErrors').text('Error: ${response.message}. Please try again.')
   }  
-  }  
+}  
+
+
 
   }
 }
