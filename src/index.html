@@ -6,8 +6,8 @@
 <body>
   <div class="container">
     <h1>Currency Exchanger</h1>
-    <label for="amount">Enter the amount of money in USD $</label>
-    <input id="amount" type="text">
+    <label for="base">Enter the amount of money in USD $</label>
+    <input id="base" type="number">
     <div class="form-group">
       <label for="currency">What would you like to convert your USD $ to?</label>
       <select id="currency">
@@ -17,12 +17,10 @@
         <option value="CRC">Costa Rican Colon</option>
         <option value="CUP">Cuban Peso</option>
         <option value="MXN">Mexican Peso</option>
-        <option value="NE">Existential Crisis Dollars</option>
       </select>
       <button class="btn-success" id="convert">Convert my currency</button>
     </div>
     <div class="showErrors"></div>
-    <div class="showUnsupportedErrors"></div>
     <div class="showConvertedCurrency"></div>
   </div> 
 </body>

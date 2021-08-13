@@ -1,14 +1,20 @@
-export default class ExchangeRate {
-  static getRate (currency, amount){
-    return fetch('https://v6.exchangerate-api.com/v6/$process.env.API_KEY}/pair/USD/${currency}/${amount}')
-    .then(function(response) {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      return response.json();
-    })
-    .catch(function(error) {
-      return error;
-    })
+export class ExchangeRate {
+  static getRate(currency){
+    return new Promise(function(resolve,reject) {
+      let request = newXMLHttpRequest();
+      const url = 'https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${currency}';
+
+      request.onload = function() {
+        if (this.status === 200) {
+          resolve(request.response);
+       } else {
+          reject(request.response);
+        }
+     };
+
+      request.open("GET", url, true);
+      request.send();
+    });
   }
-}
+}    
+
