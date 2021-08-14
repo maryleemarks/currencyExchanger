@@ -4,6 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeRate from './business.js';
 
+function clearFields(){
+  $('#base').val('');
+  $('#amount').val('');
+  $('#target').val('');  
+}
+
 $(document).ready(function() {
   $('#convert').click(function() {
     const base = $('#base').val();
@@ -17,9 +23,10 @@ $(document).ready(function() {
       const conversion=(`${convertParseInt}` * `${amount}`);
       $('.showConvertedCurrency').prepend(`Your converted currency is worth $ ${conversion} ${target}`);
       $('.showConvertedCurrency').val('');
+      clearFields();
     }, function(error) {
       $('#.showErrors').prepend(`Error: ${error}`);
-      $('#.showErrors').val('');  
+      $('#.showErrors').val(''); 
     });
   });
 });
