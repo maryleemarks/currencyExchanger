@@ -6,16 +6,17 @@ import ExchangeRate from './business.js';
 
 $(document).ready(function() {
   $('#convert').click(function() {
-    let base = parseFloat($('#userBase').val());
-    let currency = $('#currency').val();
-    let promise = ExchangeRate.getCurrency(currency);
+    let base_code = $('#base_code').val();
+    let target_code = $('#target_code').val();
+  //  const parseIntConversion=parseFloat(${body.conversion_rate});
+  //  const convertedCurrency=(${parseIntConversion}*${base_code});
+    let promise = ExchangeRate.getCurrency(target_code, base_code);
 
     promise.then(function(response) {
-      const body = JSON.parse(response); {
-          $('#.showConvertedCurrency').text('Your USD are equal to (${body.currency} * base)');
-        }, function(error) {
-          $('#.showErrors').text('Error: ${error}');
-        }  
+      const body = JSON.parse(response); 
+      $('.showConvertedCurrency').text(`Your USD are equal to ${body.conversion_rate}`);
+    }, function(error) {
+        $('#.showErrors').text(`Error: ${error}`);  
     });
   });
 });
