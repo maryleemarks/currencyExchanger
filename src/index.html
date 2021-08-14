@@ -6,11 +6,17 @@
 <body>
   <div class="container">
     <h1>Currency Exchanger</h1>
-    <label for="base_code">Enter the amount of money in USD $</label>
-    <input id="base_code" type="number" >
+    <label for="amount">Enter the amount of money you want to convert $</label>
+    <input id="amount" type="number" >
+    <label for="base">Selecct the type of currency</label>
+    <select id="base">
+      <option selected="selected"></option>
+      <option value="USD">US Dollars</option>
+      <option value="EUR">Euro</option>
+    </select>
     <div class="form-group"></div>
-      <label for="target_code">What would you like to convert your USD $ to?</label>
-      <select id="target_code">
+      <label for="target">What would you like to convert your currency to?</label>
+      <select id="target" value="USD">
         <option selected="selected"></option>
         <option value="BSD">Bahamian Dollar</option>
         <option value="CAD">Canadian Dollars</option>
