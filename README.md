@@ -19,7 +19,7 @@
 
 ## Description
 
-This webpage lets you enter in an amount of Euros or US Dollars and cenvert it to other currencies according to your user input.
+This webpage lets you enter in an amount of Euros or US Dollars and convert it to other currencies according to your user input.
 
 ## Setup/Installation Requirements
 
